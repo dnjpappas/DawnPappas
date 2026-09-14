@@ -1,0 +1,1020 @@
+/* =========================================================
+   GLOBAL BACKGROUND
+   ========================================================= */
+
+.gradient-background {
+    background: linear-gradient(300deg, blue, black, blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+.name {
+    font-family: "Mea Culpa", cursive;
+    font-weight: 400;
+    color: white;
+    font-size: clamp(4rem, 7vw, 7rem);
+}
+
+.mytitle {
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight: 200;
+}
+
+.headshot {
+    width: min(100%, 350px);
+    aspect-ratio: 7 / 9;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 10px 12px 25px rgba(150, 170, 200, 0.5);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navname {
+    color: white;
+    font-family: sans-serif;
+}
+
+.navbar .nav-link {
+    color: white;
+    position: relative;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+    color: white;
+}
+
+.navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: currentColor;
+
+    transform: translateX(-50%);
+    transition: width 0.2s ease;
+}
+
+/* Hovered link + current page */
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+    width: 60%;
+}
+
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 991.98px) {
+
+    .navbar .navbar-nav {
+        align-items: flex-end;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        display: inline-block;
+    }
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background-color: #06152f;
+    color: white;
+    padding: 0.75rem 0;
+}
+
+.footer-name {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+}
+
+.footer-text {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 0.75rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+    opacity: 0.7;
+}
+
+.footer-links i {
+    margin-right: 0.4rem;
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.75rem;
+    margin-top: 0.75rem;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   EXPERIENCE PAGE — HERO
+   ========================================================= */
+
+.learning-card {
+    background-color: #dceaff;
+}
+
+.experience-hero {
+    padding-bottom: 3rem;
+}
+
+.experience-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.35rem;
+    margin-bottom: 0.75rem;
+}
+
+.experience-title {
+    font-size: clamp(2.75rem, 4vw, 3rem);
+    line-height: 0.95;
+    font-weight: 400;
+    max-width: 1000px;
+}
+
+.experience-intro {
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    max-width: 800px;
+    margin-top: 1.5rem;
+    line-height: 1.6;
+}
+
+.experience-tagline {
+    margin-top: 1.75rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+
+/* HANDWRITTEN EXPERIENCE QUOTE */
+
+.experience-quote {
+    font-family: "Mea Culpa", cursive;
+    color: white;
+    font-size: clamp(2rem, 3vw, 4rem);
+    line-height: 0.9;
+    text-align: left;
+    transform: rotate(-10deg);
+}
+
+.experience-quote span {
+    display: block;
+}
+
+.quote-line {
+    width: 100px;
+    height: 2px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    transform: rotate(-8deg);
+    border-radius: 50%;
+}
+
+@media (max-width: 991.98px) {
+
+    .experience-quote {
+        margin-top: 2.5rem;
+        font-size: clamp(2.5rem, 10vw, 3.5rem);
+        text-align: center;
+        transform: rotate(-2deg);
+    }
+
+    .quote-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* =========================================================
+   LARGE WHITE EXPERIENCE AREA
+   ========================================================= */
+
+.experience-main {
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   TWO AREAS — ONE GREATER IMPACT
+   ========================================================= */
+
+.experience-pillars {
+    background-color: #ffffff;
+}
+
+.pillar-section-title {
+    color: #123f9c;
+    /* font-family: "Times New Roman", Times, serif; */
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-subtitle {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    margin-bottom: 0;
+}
+
+
+/* THREE PILLAR CARDS */
+
+.pillar-card {
+    background-color: #f8fbff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+    text-align: center;
+}
+
+.pillar-card h3 {
+    color: #123f9c;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+
+/* PILLAR ICONS */
+
+.pillar-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.8rem;
+    margin: 0 auto 1rem;
+}
+
+.project-icon {
+    background-color: #123f9c;
+    color: white;
+}
+
+.learning-icon {
+    background-color: #2962ff;
+    color: white;
+}
+
+
+/* PILLAR LISTS */
+
+.pillar-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.pillar-list li {
+    color: #5f6f89;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.pillar-list i {
+    color: #2962ff;
+    margin-right: 0.5rem;
+}
+
+
+/* VENN CARD */
+
+.venn-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* VENN DIAGRAM */
+
+.venn-diagram {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    margin: 1rem auto 1.5rem;
+}
+
+.venn-circle {
+    position: absolute;
+    top: 15px;
+
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.venn-left {
+    left: 0;
+    background-color: rgba(18, 63, 156, 0.80);
+}
+
+.venn-right {
+    right: 0;
+    background-color: rgba(41, 98, 255, 0.72);
+}
+
+.venn-left-label {
+    transform: translateX(-20px);
+}
+
+.venn-right-label {
+    transform: translateX(20px);
+}
+
+.venn-center-text {
+    position: absolute;
+    top: 66px;
+    left: 50%;
+    z-index: 5;
+
+    transform: translateX(-50%);
+
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+
+    pointer-events: none;
+}
+
+.venn-caption {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   EXPERIENCE BY THE NUMBERS
+   ========================================================= */
+
+.numbers-container {
+    background-color: #f3f7ff;
+    border-radius: 10px;
+}
+
+.experience-section-title {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    margin-bottom: 1rem;
+}
+
+
+/* NUMBER CARDS */
+
+.number-card {
+    background-color: #ffffff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.number-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 156, 0.14);
+}
+
+
+/* NUMBER ICON CIRCLE */
+
+.number-icon {
+    margin-bottom: 0.75rem;
+}
+
+.number-icon i {
+    color: #2962ff;
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+
+/* NUMBER */
+
+.number-card .number-value {
+    color: #123f9c;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+/* NUMBER DESCRIPTION */
+
+.number-card .number-label {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    max-width: 180px;
+}
+
+
+/* =========================================================
+   CAREER HIGHLIGHTS
+   ========================================================= */
+
+.highlights-container {
+    background-color: #f3f7ff;
+    border-radius: 10px;
+}
+
+.highlights-section-title {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* HIGHLIGHT CARDS */
+
+.highlights-card {
+    background-color: #ffffff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+
+    display: flex;
+    flex-direction: column;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.highlights-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 156, 0.14);
+}
+
+
+/* HIGHLIGHT CARD HEADER */
+
+.highlights-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+
+/* HIGHLIGHT ICON */
+
+.highlights-icon-circle {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #123f9c;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.highlights-icon-circle i {
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+/* HIGHLIGHT TITLE */
+
+.highlights-card .highlights-value {
+    color: #123f9c;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+/* HIGHLIGHT DESCRIPTION */
+
+.highlights-card .highlights-label {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+/* =========================================================
+   CAREER JOURNEY
+   ========================================================= */
+
+.career-journey {
+    background-color: #fff;
+}
+
+.career-section-title {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+   
+}
+
+.journey-subtitle {
+    color:#123f9c;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+     margin-bottom: 1rem;   
+}
+
+.career-employer {
+    color: #123f9c;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem; 
+}
+
+
+.timeline {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background-color: #dceaff;
+}
+
+.timeline-item {
+    position: relative;
+    flex: 1;
+    /* text-align: center; */
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-dot {
+    width: 18px;
+    height: 18px;
+    margin: 10px auto 1.25rem;
+    border-radius: 50%;
+    background-color: #2962ff;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px #dceaff;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content {
+    background-color: #f8fbff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-date {
+    color: #2962ff;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content h5 {
+    color: #123f9c;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-content p {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* CAREER JOURNEY MOBILE */
+
+@media (max-width: 991.98px) {
+
+    .timeline {
+        display: block;
+        padding-left: 1.5rem;
+    }
+
+    .timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 9px;
+        width: 3px;
+        height: auto;
+        right: auto;
+    }
+
+    .timeline-item {
+        display: flex;
+        text-align: left;
+        margin-bottom: 1.5rem;
+        
+    }
+
+    .timeline-dot {
+        flex-shrink: 0;
+        margin: 0 1.25rem 0 -1.5rem;
+    }
+
+    .timeline-content {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   TOOLKIT & CREDENTIALS
+   ========================================================= */
+
+.toolkit-container {
+    background-color: #f3f7ff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.toolkit-row {
+    flex-grow: 1;
+}
+
+.toolkit-section-title {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    margin-bottom: 1rem;
+}
+
+
+/* TOOLKIT CARDS */
+
+.toolkit-card {
+    background-color: #ffffff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toolkit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 156, 0.14);
+}
+
+
+/* TOOLKIT ICON CIRCLE */
+
+.toolkit-icon {
+    margin-bottom: 0.75rem;
+}
+
+.toolkit-icon i {
+    color: #2962ff;
+    font-size: 2.25rem;
+    line-height: 1;
+}
+
+
+/* TOOLKIT */
+
+.toolkit-card .toolkit-value {
+    color: #123f9c;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+/* TOOLKIT DESCRIPTION */
+
+.toolkit-card .toolkit-label {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 0;
+    max-width: 180px;
+}
+
+/* EDUCATION & CREDENTIALS */
+
+.education-container {
+    background-color: #f3f7ff;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.education-section-title {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* EDUCATION CARDS */
+
+.education-card {
+    background-color: #ffffff;
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    padding: 1.75rem 1rem;
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.08);
+
+    display: flex;
+    flex-direction: column;
+
+    flex-grow: 1;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 156, 0.14);
+}
+
+
+/* EDUCATION CARD HEADER */
+
+.education-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+
+/* EDUCATION ICON */
+
+.education-icon-circle {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #123f9c;
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.education-icon-circle i {
+    color: white;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+
+/* EDUCATION TITLE */
+
+.education-card .education-value {
+    color: #123f9c;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+
+/* EDUCATION DESCRIPTION */
+
+.education-card .education-label {
+    color: #5f6f89;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.education-details {
+    flex: 1;
+}
+
+.education-details .education-label {
+    margin-bottom: 1rem;
+}
+
+.education-details .education-value:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   DOWNLOAD RESUME
+   ========================================================= */
+
+.resume-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+.about-title {
+    font-family: "Times New Roman", Times, serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-paragraph {
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* ABOUT CARDS */
+
+.masonry-grid .card {
+    border: 1px solid #dceaff;
+    border-radius: 10px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 12px rgba(18, 63, 156, 0.10);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.masonry-grid .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(18, 63, 156, 0.16);
+}
+
+
+/* CARD IMAGES */
+
+.masonry-grid .card-img-top {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* CARD TEXT */
+
+.masonry-grid .card-title {
+    color: #123f9c;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.masonry-grid .card-text {
+    color: #5f6f89;
+    line-height: 1.6;
+}
+
+
+/* LEARNING CARDS */
+
+.learning-card {
+    background-color: #dceaff;
+    border: none;
+}
+
+.learning-card .card-title {
+    color: #123f9c;
+}
+
+.learning-quote {
+    color: #123f9c;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.learning-note {
+    color: #5f6f89;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.masonry-grid .card a {
+    color: #123f9c;
+    font-weight: 600;
+}
+
+.masonry-grid .card a:hover {
+    color: #2962ff;
+}
+
+
